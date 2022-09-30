@@ -19,8 +19,8 @@ public class UIController : MonoBehaviour
     void OnGUI ()
 		{
 			GUI.Box (new Rect (Screen.width - 110, 10, 100, 90), "Change Motion");
-            bool nextButtonClicked = GUI.Button (new Rect (Screen.width - 100, 40, 80, 20), "Next");
-            bool backButtonClicked = GUI.Button (new Rect (Screen.width - 100, 70, 80, 20), "Back");
+            bool nextButtonClicked = GUI.Button (new Rect (Screen.width - 100, 40, 80, 20), "Start");
+            bool backButtonClicked = GUI.Button (new Rect (Screen.width - 100, 70, 80, 20), "Next");
 
             if (nextButtonClicked){
                 print("Next Button is Clicked!");
