@@ -15,8 +15,8 @@ public class BlueProjectile : Projectile
         ProjectileMovement();    
     }
 
-    private void OnTriggerEnter(Collider other) {
-        CheckCollision(other);
+    private void OnColisionEnter(Collision other) {
+        //CheckCollision(other);
         Destroy(gameObject);
     }
 }
