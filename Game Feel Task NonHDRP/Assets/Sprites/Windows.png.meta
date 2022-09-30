@@ -157,7 +157,7 @@ TextureImporter:
         width: 407
         height: 538
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,6 +165,27 @@ TextureImporter:
       bones: []
       spriteID: 588a5e3a5da4cf84eaf72a82b25e99d7
       internalID: -760581623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Titlebar
+      rect:
+        serializedVersion: 2
+        x: 3548
+        y: 3625
+        width: 747
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4c45e982dfbbd4ca84838bee623b5c
+      internalID: 1305797611
       vertices: []
       indices: 
       edges: []
@@ -182,6 +203,7 @@ TextureImporter:
     nameFileIdTable:
       Windows_1: -760581623
       Windows_0: 935710210
+      Windows_Titlebar: 1305797611
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

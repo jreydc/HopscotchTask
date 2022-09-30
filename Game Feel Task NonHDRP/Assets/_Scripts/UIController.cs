@@ -16,12 +16,15 @@ public class UIController : MonoBehaviour
         bool redProjectileSettingsClicked = GUI.Button (new Rect (Screen.width - 200, 100, 180, 20), "Red Projectile");
 
         if (yellowProjectileSettingsClicked) {
+            DisablePrompts();
             SetPromptVisibility(_yellowPanel);
         }
         if (blueProjectileSettingsClicked){
+            DisablePrompts();
             SetPromptVisibility(_bluePanel);
         } 
         if (redProjectileSettingsClicked) {
+            DisablePrompts();
             SetPromptVisibility(_redPanel);
         }
 	}
