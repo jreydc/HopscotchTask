@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BlueProjectile : Projectile
 {
+    [SerializeField]private Transform _spawnPosition;
     public override void Awake()
     {
         base.Awake();
@@ -20,8 +21,8 @@ public class BlueProjectile : Projectile
     }
 
     private void OnCollisionEnter(Collision other) {
-        //CheckCollision(other);
-        Destroy(gameObject);
+        ObjectPooler._Instance.ReturnToPool(gameObject);
+        ObjectPooler._Instance.GetObjectFromPool("BlueProjectile", _spawnPosition.position, transform.localScale);
     }
 
     public void DestroyedProjectile(){

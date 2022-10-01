@@ -1362,6 +1362,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4851314481062858, guid: f412ceae8eafba746a26c5a178a0251e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851314481062858, guid: f412ceae8eafba746a26c5a178a0251e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851314481062858, guid: f412ceae8eafba746a26c5a178a0251e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851314481062858, guid: f412ceae8eafba746a26c5a178a0251e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.438
       objectReference: {fileID: 0}
@@ -1879,13 +1891,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: YellowProjectile
-    prefab: {fileID: 1355900084607990, guid: cafd3d9857dce9743b5d3154fed8cf10, type: 3}
+    prefab: {fileID: 2001222239}
     size: 5
   - tag: BlueProjectile
-    prefab: {fileID: 1660344173561568, guid: 1182726019683be439512e8650ea55ed, type: 3}
+    prefab: {fileID: 1392691762}
     size: 5
   - tag: RedProjectile
-    prefab: {fileID: 1141234444027904, guid: 86e9d2e10cef8204587e6e8114f65bdc, type: 3}
+    prefab: {fileID: 1377366993}
     size: 5
 --- !u!4 &737752905
 Transform:
@@ -2978,6 +2990,7 @@ MonoBehaviour:
     waitTime: 2
   _RB: {fileID: 1377366995}
   _meshFilter: {fileID: 1377366998}
+  _spawnPosition: {fileID: 1749063935}
 --- !u!1 &1392691762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1660344173561568, guid: 1182726019683be439512e8650ea55ed,
@@ -3013,6 +3026,7 @@ MonoBehaviour:
     waitTime: 1
   _RB: {fileID: 1392691764}
   _meshFilter: {fileID: 1392691767}
+  _spawnPosition: {fileID: 1020322821}
 --- !u!1 &1415051736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3819,6 +3833,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4296735551603604, guid: cafd3d9857dce9743b5d3154fed8cf10, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cafd3d9857dce9743b5d3154fed8cf10, type: 3}
 --- !u!4 &2001222238 stripped
@@ -3862,6 +3880,7 @@ MonoBehaviour:
     waitTime: 2
   _RB: {fileID: 2001222240}
   _meshFilter: {fileID: 2001222244}
+  _spawnPosition: {fileID: 651318403}
 --- !u!1 &2016842241
 GameObject:
   m_ObjectHideFlags: 0

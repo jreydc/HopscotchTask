@@ -25,8 +25,4 @@ public class Projectile : MonoBehaviour
     public virtual void ProjectileMovement(){
         _RB.velocity = new Vector3(0, 0, -_projectileStats.speed);
     }
-
-    public virtual void CheckCollision(Collider other){
-        Debug.Log(other.name);
-    }
 }
