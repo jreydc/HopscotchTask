@@ -13,7 +13,6 @@ public class RedProjectile : Projectile
         DestroyedProjectile();
     }
 
-    // Update is called once per frame
     void Update()
     {
         ProjectileMovement();    

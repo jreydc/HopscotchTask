@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
         //Debug.Log("Projectile is Spawned!");
     }
 
-    public virtual void ProjectileMovement(){
+    public void ProjectileMovement(){
         _RB.velocity = new Vector3(0, 0, -_projectileStats.speed);
     }
 }
