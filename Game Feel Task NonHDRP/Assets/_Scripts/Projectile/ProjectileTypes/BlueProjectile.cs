@@ -13,11 +13,6 @@ public class BlueProjectile : Projectile
         DestroyedProjectile();
     }
 
-    void Update()
-    {
-        ProjectileMovement();    
-    }
-
     private void OnCollisionEnter(Collision other) {
         ObjectPooler._Instance.ReturnToPool(gameObject);
         ObjectPooler._Instance.GetObjectFromPool("BlueProjectile", _spawnPosition.position, transform.localScale);
