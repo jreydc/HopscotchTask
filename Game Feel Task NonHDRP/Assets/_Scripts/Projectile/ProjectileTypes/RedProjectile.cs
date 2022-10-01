@@ -14,6 +14,8 @@ public class RedProjectile : Projectile
     }
 
     private void OnTriggerEnter(Collider other) {
+        VFXManager._Instance.CameraShakeFX();
+        VFXManager._Instance.Projectile3VFXExplosionPlay(transform.position);
         ObjectPooler._Instance.ReturnToPool(gameObject);
         ObjectPooler._Instance.GetObjectFromPool("RedProjectile", _spawnPosition.position, transform.localScale);
     }
