@@ -15,14 +15,10 @@ public class Projectile : MonoBehaviour
         if(IsDestroyed != null) IsDestroyed?.Invoke(this);
     }
     public virtual void OnEnable(){
-        Debug.Log("Projectile is Spawned!");
+        //Debug.Log("Projectile is Spawned!");
     }
 
-    public virtual void OnDestroy() {
-        if(IsDestroyed != null) IsDestroyed?.Invoke(this);
-    }
-
-    public virtual void ProjectileMovement(){
+    public void ProjectileMovement(){
         _RB.velocity = new Vector3(0, 0, -_projectileStats.speed);
     }
 }

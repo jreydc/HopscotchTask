@@ -11,14 +11,14 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
     {
         if (_instance == null)
         {
-            Debug.Log(typeof(T).ToString() + " is NULL.");
+            //Debug.Log(typeof(T).ToString() + " is NULL.");
             _instance = this as T;
             DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
-            Debug.Log(typeof(T).ToString() + " has tried to instantiate again!");
+            //Debug.Log(typeof(T).ToString() + " has tried to instantiate again!");
         }
 
     }
