@@ -11,21 +11,16 @@ public class Projectile : MonoBehaviour
         _RB = GetComponent<Rigidbody>();
         _meshFilter = GetComponent<MeshFilter>();
     }
+    public virtual void OnDisable() {
+        if(IsDestroyed != null) IsDestroyed?.Invoke(this);
+    }
+    public virtual void OnEnable(){
+        Debug.Log("Projectile is Spawned!");
+    }
 
     public virtual void OnDestroy() {
         if(IsDestroyed != null) IsDestroyed?.Invoke(this);
     }
-
-    // Update is called once per frame
-    /* void Update()
-    {
-        waitTime -= Time.deltaTime;
-        if (waitTime <= 0)
-        {
-            _RB.velocity = new Vector3(0, 0, -speed);
-        }
-    } */
-
 
     public virtual void ProjectileMovement(){
         _RB.velocity = new Vector3(0, 0, -_projectileStats.speed);

@@ -7,6 +7,11 @@ public class RedProjectile : Projectile
         base.Awake();
     }
     
+    public override void OnDestroy() {
+        base.OnDestroy();
+        DestroyedProjectile();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -16,5 +21,9 @@ public class RedProjectile : Projectile
     private void OnTriggerEnter(Collider other) {
         CheckCollision(other);
         Destroy(gameObject);
+    }
+
+    public void DestroyedProjectile(){
+        if (IsDestroyed == null ) print(gameObject.name + " is destroyed!");
     }
 }
