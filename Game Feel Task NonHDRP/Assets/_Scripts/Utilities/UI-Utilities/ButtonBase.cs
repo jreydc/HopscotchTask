@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public abstract class ButtonBase : MonoBehaviour
 {
     public Button _button;
 
-    private void Awake() {
+    public virtual void Awake() {
         _button = GetComponent<Button>();
 
         _button.onClick.AddListener( ()=>{

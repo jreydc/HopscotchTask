@@ -1892,13 +1892,13 @@ MonoBehaviour:
   pools:
   - tag: YellowProjectile
     prefab: {fileID: 2001222239}
-    size: 5
+    size: 1
   - tag: BlueProjectile
     prefab: {fileID: 1392691762}
-    size: 5
+    size: 1
   - tag: RedProjectile
     prefab: {fileID: 1377366993}
-    size: 5
+    size: 1
 --- !u!4 &737752905
 Transform:
   m_ObjectHideFlags: 0
@@ -3102,6 +3102,7 @@ GameObject:
   - component: {fileID: 1321330267}
   - component: {fileID: 1321330266}
   - component: {fileID: 1321330265}
+  - component: {fileID: 1321330268}
   m_Layer: 5
   m_Name: LaunchButton
   m_TagString: Untagged
@@ -3215,6 +3216,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321330263}
   m_CullTransparentMesh: 1
+--- !u!114 &1321330268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321330263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c73306fa64035409b817c016aada71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 0}
+  _projectile1: {fileID: 2001222245}
+  _projectile2: {fileID: 1392691768}
+  _projectile3: {fileID: 1377366999}
 --- !u!1 &1377366993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616913892243408, guid: f412ceae8eafba746a26c5a178a0251e,
