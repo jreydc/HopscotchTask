@@ -8,6 +8,9 @@ public class UIController : MonoBehaviour
     [SerializeField]private GameObject _redPanel;
     private bool isVisible => true;
 
+    private void Awake() {
+        DisablePrompts();
+    }
     private void OnGUI (){
         GUI.Box (new Rect (Screen.width - 210, 10, 200, 120), "Projectile Settings");
         GUI.Label(new Rect (10, 40, 100, 20), GUI.tooltip);
