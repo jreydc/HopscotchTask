@@ -32,7 +32,7 @@ public class GameManager : Singleton<GameManager>
 
         OnAfterStateChanged?.Invoke(newState);
         
-        Debug.Log($"New state: {newState}");
+        //Debug.Log($"New state: {newState}");
     }
 
     private void HandleStarting() {

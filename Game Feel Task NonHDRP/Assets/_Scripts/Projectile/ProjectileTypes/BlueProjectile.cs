@@ -10,8 +10,8 @@ public class BlueProjectile : Projectile
         base.Awake();
     }
 
-    public override void OnDestroy() {
-        base.OnDestroy();
+    public override void OnDisable() {
+        base.OnDisable();
         DestroyedProjectile();
     }
 
