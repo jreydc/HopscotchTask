@@ -7,6 +7,7 @@ public class GameManager : Singleton<GameManager>
     public static event Action<GameState> OnAfterStateChanged;
 
     public GameState State { get; private set; }
+    public Transform GameStartSpawningPosition;
 
     // Kick the game off with the first state
     private void Start() => ChangeState(GameState.STARTING);
@@ -46,6 +47,9 @@ public class GameManager : Singleton<GameManager>
     private void HandleSpawning() {
         //utilize spawning objects
         ObjectPooler._Instance.FillThePoolCollection();
+        /* ObjectPooler._Instance.GetObjectFromPool("YellowProjectile", GameStartSpawningPosition.position, ObjectPooler._Instance.pools[0].prefab.transform.localScale);
+        ObjectPooler._Instance.GetObjectFromPool("BlueProjectile", GameStartSpawningPosition.position, ObjectPooler._Instance.pools[1].prefab.transform.localScale);
+        ObjectPooler._Instance.GetObjectFromPool("RedProjectile", GameStartSpawningPosition.position, ObjectPooler._Instance.pools[2].prefab.transform.localScale); */
 
         ChangeState(GameState.SIMULATION);
     }
