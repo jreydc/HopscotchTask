@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class RedProjectile : Projectile
 {
+    [SerializeField]private Transform _spawnPosition;
     public override void Awake()
     {
         base.Awake();
@@ -19,8 +20,8 @@ public class RedProjectile : Projectile
     }
 
     private void OnTriggerEnter(Collider other) {
-        CheckCollision(other);
-        Destroy(gameObject);
+        ObjectPooler._Instance.ReturnToPool(gameObject);
+        ObjectPooler._Instance.GetObjectFromPool("RedProjectile", _spawnPosition.position, transform.localScale);
     }
 
     public void DestroyedProjectile(){

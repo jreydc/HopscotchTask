@@ -32,7 +32,7 @@ public class ObjectPooler : Singleton<ObjectPooler>
         
     }
 
-    public GameObject GetObjectFromPool(string tag, Vector3 position){
+    public GameObject GetObjectFromPool(string tag, Vector3 position, Vector3 scale){
         if (!poolDictionary.ContainsKey(tag))
         {
             Debug.LogWarning("Pool doesn't exist - " + tag);
@@ -43,7 +43,7 @@ public class ObjectPooler : Singleton<ObjectPooler>
 
         objectToSpawn.SetActive(true);
         objectToSpawn.transform.localPosition = position;
-        objectToSpawn.transform.localScale = Vector3.one;
+        objectToSpawn.transform.localScale = scale;
         //objectToSpawn.transform.rotation = rotation;
 
         poolDictionary[tag].Enqueue(objectToSpawn);
