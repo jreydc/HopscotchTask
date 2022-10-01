@@ -8,15 +8,23 @@ public class BlueProjectile : Projectile
     {
         base.Awake();
     }
-    
-    // Update is called once per frame
+
+    public override void OnDestroy() {
+        base.OnDestroy();
+        DestroyedProjectile();
+    }
+
     void Update()
     {
         ProjectileMovement();    
     }
 
-    private void OnColisionEnter(Collision other) {
+    private void OnCollisionEnter(Collision other) {
         //CheckCollision(other);
         Destroy(gameObject);
+    }
+
+    public void DestroyedProjectile(){
+        if (IsDestroyed == null ) print(gameObject.name + " is destroyed!");
     }
 }

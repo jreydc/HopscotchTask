@@ -7,7 +7,11 @@ public class YellowProjectile : Projectile
         base.Awake();
     }
     
-    // Update is called once per frame
+    public override void OnDisable() {
+        base.OnDisable();
+        DestroyedProjectile();
+    }
+
     void Update()
     {
         ProjectileMovement();    
@@ -15,6 +19,11 @@ public class YellowProjectile : Projectile
 
     private void OnTriggerEnter(Collider other) {
         CheckCollision(other);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        ObjectPooler._Instance.ReturnToPool(gameObject);
+    }
+
+    public void DestroyedProjectile(){
+        if (IsDestroyed == null ) print(gameObject.name + " is destroyed!");
     }
 }
