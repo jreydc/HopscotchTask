@@ -130,7 +130,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1355900084607990, guid: cafd3d9857dce9743b5d3154fed8cf10, type: 3}
       propertyPath: m_Name
-      value: Rocket15_Yellow
+      value: Rocket15_Yellow Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355900084607990, guid: cafd3d9857dce9743b5d3154fed8cf10, type: 3}
+      propertyPath: m_TagString
+      value: YellowTag
       objectReference: {fileID: 0}
     - target: {fileID: 4296735551603604, guid: cafd3d9857dce9743b5d3154fed8cf10, type: 3}
       propertyPath: m_RootOrder

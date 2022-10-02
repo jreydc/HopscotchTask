@@ -6,7 +6,8 @@ public class Projectile : MonoBehaviour
     public ProjectileStats _projectileStats;
     public System.Action<Projectile> IsDestroyed;
     public Rigidbody _RB;
-    public MeshFilter _meshFilter;    
+    public MeshFilter _meshFilter;
+    public Transform _spawnPosition;    
     public virtual void Awake(){
         _RB = GetComponent<Rigidbody>();
         _meshFilter = GetComponent<MeshFilter>();

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BlueProjectile : Projectile
 {
-    [SerializeField]private Transform _spawnPosition;
+    //[SerializeField]private Transform _spawnPosition;
     public override void Awake()
     {
         base.Awake();
@@ -11,6 +11,13 @@ public class BlueProjectile : Projectile
     public override void OnDisable() {
         base.OnDisable();
         DestroyedProjectile();
+    }
+     public override void OnEnable() {
+        _spawnPosition = GameObject.Find("SpawningPoint2").transform;
+    }
+
+    private void Update() {
+        ProjectileMovement();
     }
 
     private void OnCollisionEnter(Collision other) {

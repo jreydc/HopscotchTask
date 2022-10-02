@@ -44,7 +44,6 @@ public class ObjectPooler : Singleton<ObjectPooler>
         objectToSpawn.SetActive(true);
         objectToSpawn.transform.localPosition = position;
         objectToSpawn.transform.localScale = scale;
-        //objectToSpawn.transform.rotation = rotation;
 
         poolDictionary[tag].Enqueue(objectToSpawn);
 
@@ -52,6 +51,6 @@ public class ObjectPooler : Singleton<ObjectPooler>
     }
 
     public void ReturnToPool(GameObject obj){
-        obj.SetActive(false);
+        obj.SetActive(false);   
     }
 }

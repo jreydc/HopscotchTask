@@ -130,7 +130,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1616913892243408, guid: f412ceae8eafba746a26c5a178a0251e, type: 3}
       propertyPath: m_Name
-      value: Rocket29_Red
+      value: Rocket29_Red Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616913892243408, guid: f412ceae8eafba746a26c5a178a0251e, type: 3}
+      propertyPath: m_TagString
+      value: RedTag
       objectReference: {fileID: 0}
     - target: {fileID: 4851314481062858, guid: f412ceae8eafba746a26c5a178a0251e, type: 3}
       propertyPath: m_RootOrder
