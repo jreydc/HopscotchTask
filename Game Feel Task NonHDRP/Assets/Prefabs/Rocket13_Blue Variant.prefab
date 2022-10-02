@@ -13,7 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660344173561568, guid: 1182726019683be439512e8650ea55ed, type: 3}
       propertyPath: m_Name
-      value: Rocket13_Blue
+      value: Rocket13_Blue Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660344173561568, guid: 1182726019683be439512e8650ea55ed, type: 3}
+      propertyPath: m_TagString
+      value: BlueTag
       objectReference: {fileID: 0}
     - target: {fileID: 4457841904222832, guid: 1182726019683be439512e8650ea55ed, type: 3}
       propertyPath: m_RootOrder

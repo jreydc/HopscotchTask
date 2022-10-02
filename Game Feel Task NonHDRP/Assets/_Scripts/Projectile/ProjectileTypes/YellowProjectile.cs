@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class YellowProjectile : Projectile
 {
-    [SerializeField]private Transform _spawnPosition;
     public override void Awake()
     {
         base.Awake();
@@ -13,9 +12,17 @@ public class YellowProjectile : Projectile
         DestroyedProjectile();
     }
 
+     public override void OnEnable() {
+        //_spawnPosition = GameObject.Find("SpawningPoint1").transform;
+    }
+
+    private void Update() {
+        ProjectileMovement();
+    }
+
     private void OnTriggerEnter(Collider other) {
         ObjectPooler._Instance.ReturnToPool(gameObject);
-        ObjectPooler._Instance.GetObjectFromPool("YellowProjectile", _spawnPosition.position, transform.localScale);
+        ProjectileManager._Instance.YellowProjectileSpawner();
     }
 
     public void DestroyedProjectile(){
