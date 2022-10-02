@@ -12,17 +12,9 @@ public class YellowProjectile : Projectile
         DestroyedProjectile();
     }
 
-     public override void OnEnable() {
-        //_spawnPosition = GameObject.Find("SpawningPoint1").transform;
-    }
-
-    private void Update() {
-        ProjectileMovement();
-    }
-
     private void OnTriggerEnter(Collider other) {
         ObjectPooler._Instance.ReturnToPool(gameObject);
-        ProjectileManager._Instance.YellowProjectileSpawner();
+        //ProjectileManager._Instance.YellowProjectileSpawner();
     }
 
     public void DestroyedProjectile(){

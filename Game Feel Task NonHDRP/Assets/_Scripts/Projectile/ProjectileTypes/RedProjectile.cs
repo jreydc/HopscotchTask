@@ -17,11 +17,6 @@ public class RedProjectile : Projectile
         DestroyedProjectile();
     }
 
-
-    private void Update() {
-        ProjectileMovement();
-    }
-
     private void OnTriggerEnter(Collider other) {
         VFXManager._Instance.CameraShakeFX();
         //CameraShaker.Instance.ShakeOnce(4f, 4f, 0f, 0.5f);
