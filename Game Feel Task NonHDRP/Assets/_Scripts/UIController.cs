@@ -6,6 +6,7 @@ public class UIController : MonoBehaviour
     [SerializeField]private GameObject _yellowPanel;
     [SerializeField]private GameObject _bluePanel;
     [SerializeField]private GameObject _redPanel;
+
     private bool isVisible => true;
 
     private void Awake() {
