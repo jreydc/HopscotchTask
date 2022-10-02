@@ -1360,15 +1360,15 @@ MonoBehaviour:
   - tag: YellowProjectile
     prefab: {fileID: 4634176046789867704, guid: b344d287a929de644ac77d095d2a921b,
       type: 3}
-    size: 5
+    size: 10
   - tag: BlueProjectile
     prefab: {fileID: 7415037628914570543, guid: b44a527a85edcef4aaa28e223aa2f3e5,
       type: 3}
-    size: 5
+    size: 10
   - tag: RedProjectile
     prefab: {fileID: 6633188913352207590, guid: 36c8902a9f78f424fa50070ece0279cb,
       type: 3}
-    size: 5
+    size: 10
 --- !u!4 &737752905
 Transform:
   m_ObjectHideFlags: 0
@@ -2228,7 +2228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1321330264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2348,9 +2348,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 0}
-  _projectile1: {fileID: 1392691768, guid: b44a527a85edcef4aaa28e223aa2f3e5, type: 3}
-  _projectile2: {fileID: 2001222245, guid: b344d287a929de644ac77d095d2a921b, type: 3}
-  _projectile3: {fileID: 1377366999, guid: 36c8902a9f78f424fa50070ece0279cb, type: 3}
 --- !u!1 &1415051736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,10 +3145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStartSpawningParent: {fileID: 2016842242}
-  gameStartSpawningPosition1: {fileID: 651318403}
-  gameStartSpawningPosition2: {fileID: 1020322821}
-  gameStartSpawningPosition3: {fileID: 1749063935}
-  _spawnPosition: {fileID: 651318403}
+  projectileSpawningPosition1: {fileID: 651318403}
+  projectileSpawningPosition2: {fileID: 1020322821}
+  projectileSpawningPosition3: {fileID: 1749063935}
 --- !u!1001 &2049356133
 PrefabInstance:
   m_ObjectHideFlags: 0

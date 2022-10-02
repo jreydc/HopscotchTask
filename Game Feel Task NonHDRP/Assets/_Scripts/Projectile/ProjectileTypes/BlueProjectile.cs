@@ -16,10 +16,6 @@ public class BlueProjectile : Projectile
         _spawnPosition = GameObject.Find("SpawningPoint2").transform;
     }
 
-    private void Update() {
-        ProjectileMovement();
-    }
-
     private void OnCollisionEnter(Collision other) {
         ObjectPooler._Instance.ReturnToPool(gameObject);
         ObjectPooler._Instance.GetObjectFromPool("BlueProjectile", _spawnPosition.position, transform.localScale);

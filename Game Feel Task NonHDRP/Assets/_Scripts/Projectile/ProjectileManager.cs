@@ -13,17 +13,18 @@ public class ProjectileManager : MonoBehaviour
     private void Awake() => _instance = this;
     #endregion
     
-     public Transform gameStartSpawningParent;
-    public Transform gameStartSpawningPosition1;
-    public Transform gameStartSpawningPosition2;
-    public Transform gameStartSpawningPosition3;
-    [SerializeField]private Transform _spawnPosition;
+    public Transform gameStartSpawningParent;
+    public Transform projectileSpawningPosition1;
+    public Transform projectileSpawningPosition2;
+    public Transform projectileSpawningPosition3;  
+
 
     public void GameStartSpawn(){
         ObjectPooler._Instance.FillThePoolCollection();
-        var yellowProjectile = ObjectPooler._Instance.GetObjectFromPool("YellowProjectile", gameStartSpawningPosition1.position, ObjectPooler._Instance.pools[0].prefab.transform.localScale);
-        var blueProjectile = ObjectPooler._Instance.GetObjectFromPool("BlueProjectile", gameStartSpawningPosition2.position, ObjectPooler._Instance.pools[1].prefab.transform.localScale);
-        var redProjectile = ObjectPooler._Instance.GetObjectFromPool("RedProjectile", gameStartSpawningPosition3.position, ObjectPooler._Instance.pools[2].prefab.transform.localScale);
+
+        var yellowProjectile = ObjectPooler._Instance.GetObjectFromPool("YellowProjectile", projectileSpawningPosition1.position, ObjectPooler._Instance.pools[0].prefab.transform.localScale);
+        var blueProjectile = ObjectPooler._Instance.GetObjectFromPool("BlueProjectile", projectileSpawningPosition2.position, ObjectPooler._Instance.pools[1].prefab.transform.localScale);
+        var redProjectile = ObjectPooler._Instance.GetObjectFromPool("RedProjectile", projectileSpawningPosition3.position, ObjectPooler._Instance.pools[2].prefab.transform.localScale);
 
         yellowProjectile.transform.SetParent(gameStartSpawningParent);
         blueProjectile.transform.SetParent(gameStartSpawningParent);
@@ -31,23 +32,27 @@ public class ProjectileManager : MonoBehaviour
     }
 
     public Projectile YellowProjectileSpawner(){
-        var yellowProjectileOBJ = ObjectPooler._Instance.GetObjectFromPool("YellowProjectile", _spawnPosition.position, transform.localScale);
+        ObjectPooler._Instance.poolDictionary["YellowProjectile"].Dequeue();
+        var yellowProjectileScale = ObjectPooler._Instance.pools[0].prefab.transform.localScale;
+        var yellowProjectileOBJ = ObjectPooler._Instance.GetObjectFromPool("YellowProjectile", projectileSpawningPosition1.position, yellowProjectileScale);
         Projectile yellowProjectile = yellowProjectileOBJ.GetComponent<Projectile>();
 
         return yellowProjectile;
     }
 
     public Projectile BlueProjectileSpawner(){
-        var yellowProjectileOBJ = ObjectPooler._Instance.GetObjectFromPool("BlueProjectile", _spawnPosition.position, transform.localScale);
-        Projectile yellowProjectile = yellowProjectileOBJ.GetComponent<Projectile>();
+        var blueProjectileScale = ObjectPooler._Instance.pools[1].prefab.transform.localScale;
+        var blueProjectileOBJ = ObjectPooler._Instance.GetObjectFromPool("BlueProjectile", projectileSpawningPosition2.position, blueProjectileScale);
+        Projectile yellowProjectile = blueProjectileOBJ.GetComponent<Projectile>();
 
         return yellowProjectile;
     }
 
-    public Projectile YRedProjectileSpawner(){
-        var yellowProjectileOBJ = ObjectPooler._Instance.GetObjectFromPool("RedProjectile", _spawnPosition.position, transform.localScale);
-        Projectile yellowProjectile = yellowProjectileOBJ.GetComponent<Projectile>();
+    public Projectile RedProjectileSpawner(){
+        var redProjectileScale = ObjectPooler._Instance.pools[2].prefab.transform.localScale;
+        var redProjectileOBJ = ObjectPooler._Instance.GetObjectFromPool("RedProjectile", projectileSpawningPosition3.position, redProjectileScale);
+        Projectile redProjectile = redProjectileOBJ.GetComponent<Projectile>();
 
-        return yellowProjectile;
+        return redProjectile;
     }
 }
