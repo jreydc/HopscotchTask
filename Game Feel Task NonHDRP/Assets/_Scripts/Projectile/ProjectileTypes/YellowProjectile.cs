@@ -14,7 +14,7 @@ public class YellowProjectile : Projectile
 
     private void OnTriggerEnter(Collider other) {
         ObjectPooler._Instance.ReturnToPool(gameObject);
-        //ProjectileManager._Instance.YellowProjectileSpawner();
+        VFXManager._Instance.Projectile1VFXExplosionPlay(transform.position);
     }
 
     public void DestroyedProjectile(){

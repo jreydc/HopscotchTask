@@ -1096,7 +1096,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1504,7 +1504,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904765317
 GameObject:
@@ -1891,7 +1891,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071593738
 GameObject:
@@ -2089,7 +2089,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1152671367
 MonoBehaviour:
@@ -2107,11 +2107,14 @@ MonoBehaviour:
     type: 3}
   projectile1ImpactVFXExplosion2: {fileID: 100000, guid: 3156817f64ec68948ad6bb26569b9ef5,
     type: 3}
+  projectile2ImpactVFXExplosion1: {fileID: 100002, guid: db50ab1c866680e4bb870bf5eb72dd3d,
+    type: 3}
+  projectile2ImpactVFXExplosion2: {fileID: 1845240806346120, guid: b395d5d6eb4b4b846acc021ee036b744,
+    type: 3}
   projectile3ImpactVFXExplosion1: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
     type: 3}
   projectile3ImpactVFXExplosion2: {fileID: 1965343156803978, guid: aa8d6482d70a23445b4b2a928ed1b845,
     type: 3}
-  projectile3ImpactVFXExplosion3: {fileID: 0}
 --- !u!1 &1250255277
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,7 +2888,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1758046608
 PrefabInstance:

@@ -12,13 +12,10 @@ public class BlueProjectile : Projectile
         base.OnDisable();
         DestroyedProjectile();
     }
-     public override void OnEnable() {
-        _spawnPosition = GameObject.Find("SpawningPoint2").transform;
-    }
 
     private void OnCollisionEnter(Collision other) {
         ObjectPooler._Instance.ReturnToPool(gameObject);
-        ObjectPooler._Instance.GetObjectFromPool("BlueProjectile", _spawnPosition.position, transform.localScale);
+        VFXManager._Instance.Projectile2VFXExplosionPlay(transform.position);
     }
 
     public void DestroyedProjectile(){
